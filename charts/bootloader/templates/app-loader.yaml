@@ -19,7 +19,7 @@ spec:
         - values.yaml
         - /releases/{{ $.Values.environment }}/{{ .name }}.yaml
     path: charts/{{ $.Values.deploymentType }}/{{- if .path }}{{ .path }}{{ else }}{{ .name }}{{ end }}
-    repoURL: {{ .Values.repoURL | quote }}
+    repoURL: {{ $.Values.repoURL | quote }}
     targetRevision: main
   syncPolicy:
     automated:
