@@ -1,0 +1,17 @@
+apiVersion: v2
+type: application
+name: tracee
+description: A Helm chart for tracee
+version: 1.0.0
+appVersion: v1.0.0
+maintainers:
+  - name: Brandon Helms
+    email: bhelms85@gmail.com
+keywords:
+  - security
+  - tracee
+  - sast
+dependencies:
+  - name: tracee
+    version: 0.9.3
+    repository: https://aquasecurity.github.io/helm-charts/

@@ -1,0 +1,17 @@
+apiVersion: v2
+type: application
+name: trivy
+description: A Helm chart for Trivy
+version: 1.0.0
+appVersion: v1.0.0
+maintainers:
+  - name: Brandon Helms
+    email: bhelms85@gmail.com
+keywords:
+  - security
+  - trivy
+  - sast
+dependencies:
+  - name: trivy-operator
+    version: 0.24.1
+    repository: https://aquasecurity.github.io/helm-charts/

@@ -1,0 +1,10 @@
+ingress-nginx:
+  controller:
+    service:
+      targetPorts:
+        http: http
+        https: http
+      internal:
+        enabled: true
+        annotations:
+          service.beta.kubernetes.io/aws-load-balancer-scheme: "internal"

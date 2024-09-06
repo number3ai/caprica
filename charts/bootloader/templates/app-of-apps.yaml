@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps-{{ .Values.deploymentType }}
+  finalizers:
+  - "resources-finalizer.argocd.argoproj.io"
+  namespace: "argocd"
+spec:
+  destination:
+    server: "https://kubernetes.default.svc"
+  project: "default"
+  source:
+    path: "charts/bootloaders/security/"
+    repoURL: "git@github.com:Cr0n1c/testRepo.git"
+    targetRevision: "HEAD"
+    helm:
+      ignoreMissingValueFiles: true
+      valueFiles:
+        - values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

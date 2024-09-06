@@ -1,0 +1,13 @@
+apiVersion: v2
+type: application
+name: app-of-apps
+description: A Helm chart for Argocd App of Apps
+version: 1.0.0
+appVersion: v1.0.0
+maintainers:
+  - name: Brandon Helms
+    email: bhelms85@gmail.com
+keywords:
+  - infrastructure
+  - argocd
+  - gitops

@@ -1,0 +1,6 @@
+aws-load-balancer-controller:
+  serviceAccount:
+    create: true
+    name: "aws-load-balancer-controller-sa"
+  serviceMonitor:
+    enabled: true

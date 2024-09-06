@@ -1,0 +1,23 @@
+kubescape:
+  capabilities:
+    autoUpgrading: enable
+    configurationScan: enable
+    continuousScan: enable
+    malwareDetection: enable
+    networkPolicyService: enable
+    nodeScan: enable
+    relevancy: enable
+    runtimeDetection: enable
+    runtimeObservability: enable
+    nodeProfileService: enable
+    prometheusExporter: enable
+    seccompGenerator: enable
+    seccompProfileService: enable
+    vexGeneration: enable
+    vulnerabilityScan: enable
+  resources:
+    limits:
+      memory: 200Mi
+  serviceScanConfig:
+    enabled : enable
+    interval: 1h

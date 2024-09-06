@@ -1,0 +1,42 @@
+{{- range .Values.apps }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations: {}
+  name: {{ .name }}
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: {{ if .namespace }}{{ .namespace }}{{ else }}{{ .name }}{{ end }}
+  project: default
+  source:
+    helm:
+      ignoreMissingValueFiles: true
+      valueFiles:
+        - values.yaml
+        - values-dev.yaml
+    path: charts/{{ $.Values.deploymentType }}/{{- if .path }}{{ .path }}{{ else }}{{ .name }}{{ end }}
+    repoURL: git@github.com:Cr0n1c/testRepo.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    {{- if .syncOptions }}
+      - PruneLast={{ default "true" .syncOptions.pruneLast}}
+      - CreateNamespace={{ default "true" .syncOptions.createNamespace  }}
+      - Replace={{ default "false" .syncOptions.replace }}
+    {{- else }}
+    - PruneLast=true
+    - CreateNamespace=true
+    {{- end }}
+  {{- if .ignoreDifferences }}
+  ignoreDifferences: 
+    {{- toYaml .ignoreDifferences | nindent 6 }}
+  {{- end }}
+---
+{{- end }}
