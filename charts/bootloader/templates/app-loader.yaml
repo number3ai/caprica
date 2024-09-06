@@ -19,7 +19,7 @@ spec:
         - values.yaml
         - /releases/{{ $.Values.environment }}/{{ .name }}.yaml
     path: charts/{{ $.Values.deploymentType }}/{{- if .path }}{{ .path }}{{ else }}{{ .name }}{{ end }}
-    repoURL: git@github.com:Cr0n1c/testRepo.git
+    repoURL: {{ .Values.repoURL | quote }}
     targetRevision: main
   syncPolicy:
     automated:
