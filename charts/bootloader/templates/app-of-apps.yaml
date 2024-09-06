@@ -10,13 +10,14 @@ spec:
     server: "https://kubernetes.default.svc"
   project: "default"
   source:
-    path: "charts/bootloaders/security/"
-    repoURL: "git@github.com:Cr0n1c/testRepo.git"
+    path: "charts/bootloader"
+    repoURL: {{ .Values.repoURL | quote }}
     targetRevision: "HEAD"
     helm:
       ignoreMissingValueFiles: true
       valueFiles:
         - values.yaml
+        - /releases/{{ .Values.environment }}/app-of-apps-{{ .Values.deploymentType }}.yaml
   syncPolicy:
     automated:
       prune: true

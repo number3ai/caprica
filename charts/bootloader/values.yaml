@@ -1,2 +1,4 @@
-deploymentType: unknown
 apps: []
+deploymentType: unknown
+environment: unknown
+repoURL: "git@github.com:number3ai/caprica.git"

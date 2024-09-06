@@ -17,7 +17,7 @@ spec:
       ignoreMissingValueFiles: true
       valueFiles:
         - values.yaml
-        - values-dev.yaml
+        - /releases/{{ $.Values.environment }}/{{ .name }}.yaml
     path: charts/{{ $.Values.deploymentType }}/{{- if .path }}{{ .path }}{{ else }}{{ .name }}{{ end }}
     repoURL: git@github.com:Cr0n1c/testRepo.git
     targetRevision: main

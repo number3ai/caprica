@@ -1,4 +1,3 @@
-deploymentType: infrastructure
 apps: 
   - name: ingress-nginx
   - name: prometheus
@@ -13,3 +12,5 @@ apps:
     namespace: kube-system
   - name: karpenter
     namespace: kube-system
+deploymentType: infrastructure
+environment: dev

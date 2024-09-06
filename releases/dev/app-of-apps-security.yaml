@@ -1,4 +1,3 @@
-deploymentType: security
 apps:
   - name: kubescape-operator
     namespace: kubescape
@@ -6,3 +5,5 @@ apps:
     namespace: trivy-system
   - name: tracee
     namespace: tracee
+deploymentType: security
+environment: dev
