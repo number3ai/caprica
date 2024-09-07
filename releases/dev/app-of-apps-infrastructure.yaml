@@ -1,16 +1,1 @@
-apps: 
-  - name: ingress-nginx
-  - name: prometheus
-    namespace: monitoring
-  - name: amazon-cloudwatch-observability
-    namespace: amazon-cloudwatch
-    syncOptions:
-      replace: true
-  - name: aws-ebs-csi-driver
-    namespace: kube-system
-  - name: aws-load-balancer-controller
-    namespace: kube-system
-  - name: karpenter
-    namespace: kube-system
-deploymentType: infrastructure
 environment: dev
