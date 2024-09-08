@@ -1,0 +1,7 @@
+aws-load-balancer-controller:
+  clusterName: dev
+  region: us-west-2
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::783634644742:role/AWSLoadBalancerControllerRole
+  vpcId: vpc-0959589af3e87170f
