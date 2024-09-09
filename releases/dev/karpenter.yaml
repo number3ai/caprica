@@ -1,4 +1,0 @@
-karpenter:
-  settings:
-    clusterName: dev
-    # interruptionQueue:

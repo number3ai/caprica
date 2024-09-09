@@ -1,3 +1,0 @@
-amazon-cloudwatch-observability:
-  clusterName: dev
-  region: us-west-2
