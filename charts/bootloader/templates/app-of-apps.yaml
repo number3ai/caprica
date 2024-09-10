@@ -17,7 +17,7 @@ spec:
       ignoreMissingValueFiles: true
       valueFiles:
         - values.yaml
-        - /releases/global/app-of-apps-{{ .Values.deploymentType }}.yaml
+        - values-{{ .Values.deploymentType }}.yaml
         - /releases/{{ .Values.environment }}/app-of-apps-{{ .Values.deploymentType }}.generated.yaml
         - /releases/{{ .Values.environment }}/app-of-apps-{{ .Values.deploymentType }}.yaml
   syncPolicy:
