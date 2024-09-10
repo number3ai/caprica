@@ -5,4 +5,8 @@ apps:
     namespace: trivy-system
   - name: tracee
     namespace: tracee
+  - name: istio-base
+    namespace: istio-system
+  - name: istiod
+    namespace: istio-system
 deploymentType: security
