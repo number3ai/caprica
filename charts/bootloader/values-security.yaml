@@ -10,3 +10,4 @@ apps:
   - name: istiod
     namespace: istio-system
 deploymentType: security
+repoURL: "git@github.com:number3ai/caprica.git"

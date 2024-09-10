@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: app-of-apps-{{ .Values.deploymentType }}
   finalizers:
-  - "resources-finalizer.argocd.argoproj.io"
+    - resources-finalizer.argocd.argoproj.io
   namespace: "argocd"
 spec:
   destination:
@@ -16,7 +16,6 @@ spec:
     helm:
       ignoreMissingValueFiles: true
       valueFiles:
-        - values.yaml
         - values-{{ .Values.deploymentType }}.yaml
         - /releases/{{ .Values.environment }}/app-of-apps-{{ .Values.deploymentType }}.generated.yaml
         - /releases/{{ .Values.environment }}/app-of-apps-{{ .Values.deploymentType }}.yaml

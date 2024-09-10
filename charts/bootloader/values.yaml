@@ -1,2 +1,4 @@
 apps: []
 repoURL: "git@github.com:number3ai/caprica.git"
+deploymentType: ""
+environment: ""

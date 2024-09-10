@@ -13,3 +13,4 @@ apps:
   - name: karpenter
     namespace: kube-system
 deploymentType: infrastructure
+repoURL: "git@github.com:number3ai/caprica.git"
