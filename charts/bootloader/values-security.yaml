@@ -5,9 +5,21 @@ apps:
     namespace: trivy-system
   - name: tracee
     namespace: tracee
-  - name: istio-base
+  - ignoreDifferences:
+      - group: admissionregistration.k8s.io
+        kind: ValidatingWebhookConfiguration
+        name: istiod-default-validator
+        jqPathExpressions:
+          - .webhooks[] | select(.name == "validation.istio.io") | .failurePolicy
+    name: istio-base
     namespace: istio-system
-  - name: istiod
+  - ignoreDifferences:
+      - group: admissionregistration.k8s.io
+        kind: ValidatingWebhookConfiguration
+        name: istio-validator-istio-system
+        jqPathExpressions:
+          - .webhooks[] | select(.name == "rev.validation.istio.io") | .failurePolicy
+    name: istiod
     namespace: istio-system
 deploymentType: security
 repoURL: "git@github.com:number3ai/caprica.git"
