@@ -3,4 +3,4 @@ aws-load-balancer-controller:
     create: true
     name: "aws-load-balancer-controller-sa"
   serviceMonitor:
-    enabled: true
+    enabled: false
