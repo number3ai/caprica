@@ -17,7 +17,6 @@ spec:
       ignoreMissingValueFiles: true
       valueFiles:
         - values.yaml
-        - /releases/global/{{ .name }}.yaml
         - /releases/{{ $.Values.environment }}/{{ .name }}.generated.yaml
         - /releases/{{ $.Values.environment }}/{{ .name }}.yaml
     path: charts/{{ $.Values.deploymentType }}/{{- if .path }}{{ .path }}{{ else }}{{ .name }}{{ end }}
