@@ -1,0 +1,6 @@
+dependencies:
+- name: tracee
+  repository: https://aquasecurity.github.io/helm-charts/
+  version: 0.9.3
+digest: sha256:a84e0d172a34b6c0a9c33bc370943e3d65ddff4b8b77ff498c5590cfa45446ff
+generated: "2024-09-12T18:35:31.445844-05:00"

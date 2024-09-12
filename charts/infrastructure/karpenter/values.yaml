@@ -24,7 +24,3 @@ karpenter:
     queueName: "karpenter-queue"
   rbac:
     create: true
-  serviceAccount:
-    name: karpenter-sa
-    annotations:
-      eks.amazonaws.com/role-arn: arn:aws:iam::<account-id>:role/<karpenter-irsa-role>
