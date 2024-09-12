@@ -1,0 +1,28 @@
+name: Kubelinter
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Scan repo with kube-linter
+        uses: stackrox/kube-linter-action@v1.0.5
+        with:
+          directory: yamls
+          format: sarif
+          output-file: kube-linter.sarif
+        continue-on-error: true
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'kube-linter.sarif'
