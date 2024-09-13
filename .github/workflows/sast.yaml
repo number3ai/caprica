@@ -5,10 +5,11 @@ on:
       - main
   pull_request:
   workflow_dispatch:
-
+    
 permissions:
-  id-token: write
+  actions: read
   contents: read
+  security-events: write
 
 jobs:
   build:
