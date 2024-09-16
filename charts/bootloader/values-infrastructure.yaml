@@ -12,5 +12,7 @@ apps:
     namespace: kube-system
   - name: karpenter
     namespace: kube-system
+  - name: grafana
+    namespace: monitoring
 deploymentType: infrastructure
 repoURL: "git@github.com:number3ai/caprica.git"
