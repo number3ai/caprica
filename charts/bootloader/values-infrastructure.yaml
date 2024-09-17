@@ -1,5 +1,7 @@
 apps: 
   - name: ingress-nginx
+  - name: prom-crds
+    namespace: monitoring
   - name: prometheus
     namespace: monitoring
   - name: amazon-cloudwatch-observability
