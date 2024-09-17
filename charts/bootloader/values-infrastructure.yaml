@@ -2,6 +2,8 @@ apps:
   - name: ingress-nginx
   - name: prometheus-operator-crds
     namespace: monitoring
+    syncOptions:
+      replace: true
   - name: prometheus
     namespace: monitoring
   - name: amazon-cloudwatch-observability
