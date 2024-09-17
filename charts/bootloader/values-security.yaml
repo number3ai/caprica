@@ -1,4 +1,6 @@
 apps:
+  - name: cert-manager
+    namespace: cert-manager
   - name: trivy-operator
     namespace: trivy-system
   - name: tracee

@@ -1,0 +1,16 @@
+apiVersion: v2
+type: application
+name: cert-manager
+description: A Helm chart for cert-manager
+version: 1.0.0
+appVersion: v1.15.3
+maintainers:
+  - name: Brandon Helms
+    email: bhelms85@gmail.com
+keywords:
+  - security
+  - cert-manager
+dependencies:
+  - name: cert-manager
+    version: v1.15.3
+    repository: https://charts.jetstack.io
