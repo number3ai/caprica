@@ -1,6 +1,6 @@
 apps: 
   - name: ingress-nginx
-  - name: prom-crds
+  - name: prometheus-operator-crds
     namespace: monitoring
   - name: prometheus
     namespace: monitoring
