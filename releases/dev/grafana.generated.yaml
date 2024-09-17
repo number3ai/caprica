@@ -20,7 +20,3 @@ grafana:
   serviceAccount:
     annotations:
       eks.amazonaws.com/role-arn: arn:aws:iam::783634644742:role/grafana-sa
-  admin:
-    existingSecret: dev/grafana/credentials
-    userKey: username
-    passwordKey: password
