@@ -18,9 +18,5 @@ grafana:
             authType: default
             defaultRegion: us-west-2
   serviceAccount:
-    labels:
+    annotations:
       eks.amazonaws.com/role-arn: arn:aws:iam::783634644742:role/grafana-sa
-  admin:
-    existingSecret: dev/grafana/credentials
-    userKey: user
-    passwordKey: password
