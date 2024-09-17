@@ -3,5 +3,5 @@ aws-load-balancer-controller:
   region: us-west-2
   serviceAccount:
     annotations:
-      eks.amazonaws.com/role-arn: arn:aws:iam::783634644742:role/AWSLoadBalancerControllerRole
+      eks.amazonaws.com/role-arn: arn:aws:iam::783634644742:role/aws-load-balancer-controller-sa
   vpcId: vpc-0959589af3e87170f
