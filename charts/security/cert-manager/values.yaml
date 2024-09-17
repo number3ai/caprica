@@ -4,5 +4,3 @@ cert-manager:
   prometheus:
     servicemonitor:
       enabled: true
-    podmonitor:
-      enabled: true
