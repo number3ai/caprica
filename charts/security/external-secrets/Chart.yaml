@@ -1,0 +1,16 @@
+apiVersion: v2
+type: application
+name: external-secrets
+description: A Helm chart for external-secrets
+version: 1.0.0
+appVersion: v0.10.3
+maintainers:
+  - name: Brandon Helms
+    email: bhelms85@gmail.com
+keywords:
+  - security
+  - external-secrets
+dependencies:
+  - name: external-secrets
+    version: 0.10.3
+    repository: https://charts.external-secrets.io

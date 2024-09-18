@@ -1,0 +1,12 @@
+external-secrets:
+  installCRDs: true
+  resources: 
+    requests:
+      cpu: 10m
+      memory: 32Mi
+  serviceAccount:
+    name: external-secrets-sa
+  serviceMonitor:
+    enabled: true
+  metrics:
+    enabled: true

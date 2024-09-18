@@ -1,10 +1,9 @@
 apps:
   - name: cert-manager
-    namespace: cert-manager
+  - name: external-secrets
+  - name: tracee
   - name: trivy-operator
     namespace: trivy-system
-  - name: tracee
-    namespace: tracee
   - ignoreDifferences:
       - group: admissionregistration.k8s.io
         kind: ValidatingWebhookConfiguration
