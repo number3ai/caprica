@@ -1,5 +1,15 @@
 apps: 
+  - name: aws-ebs-csi-driver
+    namespace: kube-system
+  - name: aws-load-balancer-controller
+    namespace: kube-system
+  - name: cost-analyzer
+    namespace: kubecost
+  - name: grafana
+    namespace: monitoring
   - name: ingress-nginx
+  - name: karpenter
+    namespace: kube-system
   - name: prometheus-operator-crds
     namespace: monitoring
     syncOptions:
@@ -10,13 +20,5 @@ apps:
     namespace: amazon-cloudwatch
     syncOptions:
       replace: true
-  - name: aws-ebs-csi-driver
-    namespace: kube-system
-  - name: aws-load-balancer-controller
-    namespace: kube-system
-  - name: karpenter
-    namespace: kube-system
-  - name: grafana
-    namespace: monitoring
 deploymentType: infrastructure
 repoURL: "git@github.com:number3ai/caprica.git"
