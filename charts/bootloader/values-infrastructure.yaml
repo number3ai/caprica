@@ -3,8 +3,6 @@ apps:
     namespace: kube-system
   - name: aws-load-balancer-controller
     namespace: kube-system
-  - name: cost-analyzer
-    namespace: kubecost
   - name: grafana
     namespace: monitoring
   - name: ingress-nginx
