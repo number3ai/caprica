@@ -1,6 +1,6 @@
 apiVersion: v2
-name: kubecost
-description: A Helm chart for kubecost
+name: cost-analyzer
+description: A Helm chart for cost-analyzer
 
 # Application charts are a collection of templates that can be packaged into versioned archives
 # to be deployed.
