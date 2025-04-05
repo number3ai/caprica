@@ -16,7 +16,7 @@ grafana:
           editable: false
           jsonData:
             authType: default
-            defaultRegion: us-west-2
+            defaultRegion: us-east-1
   serviceAccount:
     annotations:
       eks.amazonaws.com/role-arn: arn:aws:iam::783634644742:role/grafana-sa
